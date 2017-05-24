@@ -1,28 +1,39 @@
 #!/bin/bash
 
-yum update -y --exclude=kerne
+yum update -y --exclude=kernel
 
-# install utility
+# Install Utility
+
 yum install -y nano git unzip screen
 
 # Apache
+
 yum install -y httpd httpd-devel httpd-tools
+
 chkconfig --add httpd
+
 chkconfig httpd on
+
 service httpd stop
 
-# mount local www resources
+# Mount local www resources
+
 rm -rf /var/www/html
+
 ln -s /vagrant /var/www/html
 
 service httpd start
 
 # PHP Install
+
 yum install -y php php-cli php-common php-devel php-mysql
 
 # MySQL
+
 yum install -y mysql mysql-server mysql-devel
+
 chkconfig --add mysqld
+
 chkconfig mysqld on
 
 service mysqld start
