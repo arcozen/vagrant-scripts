@@ -18,7 +18,7 @@ ln -s /vagrant /var/www/html
 service httpd start
 
 # PHP Install
-yum install -y php php-cli php-common php-devel phph-mysql
+yum install -y php php-cli php-common php-devel php-mysql
 
 # MySQL
 yum install -y mysql mysql-server mysql-devel
