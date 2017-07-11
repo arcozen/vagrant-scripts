@@ -6,6 +6,10 @@ yum update -y --exclude=kernel
 
 yum install -y nano git unzip screen wget
 
+# Install Ansible
+
+yum install -y ansible
+
 # Apache
 
 yum install -y httpd httpd-devel httpd-tools
