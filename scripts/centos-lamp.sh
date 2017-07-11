@@ -4,7 +4,7 @@ yum update -y --exclude=kernel
 
 # Install Utility
 
-yum install -y nano git unzip screen wget
+yum install -y nano git unzip screen wget libselinux-python
 
 # Install Ansible
 
